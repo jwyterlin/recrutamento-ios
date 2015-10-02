@@ -29,8 +29,13 @@
     
     Connection *con = [Connection new];
     
+    // TODO:
+    //
+    // Turn dynamic if they ask
     NSNumber *page = [NSNumber numberWithInt:1];
     NSNumber *limit = [NSNumber numberWithInt:10];
+    //
+    
     NSString *extendedImages = @"extended=images";
     
     NSString *url = [NSString stringWithFormat:@"%@?page=%i&limit=%i&%@",[Routes WS_SHOWS_POPULAR],[page intValue],[limit intValue],extendedImages];
