@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7B04FD021BBEB40F00FBB683 /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B04FD011BBEB40F00FBB683 /* Constants.m */; settings = {ASSET_TAGS = (); }; };
 		7B85BD591BBE1DB10057069F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B85BD581BBE1DB10057069F /* AppDelegate.swift */; };
 		7B85BD5E1BBE1DB10057069F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B85BD5C1BBE1DB10057069F /* Main.storyboard */; };
 		7B85BD601BBE1DB10057069F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7B85BD5F1BBE1DB10057069F /* Assets.xcassets */; };
@@ -41,6 +42,8 @@
 /* Begin PBXFileReference section */
 		036939D846556043D5B1674D /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		5CFD178B37BA50DF0027E1A3 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		7B04FD001BBEB40F00FBB683 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Constants.h; path = "Service Layer/Constants.h"; sourceTree = "<group>"; };
+		7B04FD011BBEB40F00FBB683 /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Constants.m; path = "Service Layer/Constants.m"; sourceTree = "<group>"; };
 		7B85BD551BBE1DB10057069F /* task.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = task.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B85BD581BBE1DB10057069F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7B85BD5D1BBE1DB10057069F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -114,6 +117,8 @@
 			isa = PBXGroup;
 			children = (
 				7B8C6B981BBE2BBF0043165C /* Connection */,
+				7B04FD001BBEB40F00FBB683 /* Constants.h */,
+				7B04FD011BBEB40F00FBB683 /* Constants.m */,
 			);
 			name = "Service Layer";
 			sourceTree = "<group>";
@@ -143,12 +148,12 @@
 		7B85BD571BBE1DB10057069F /* task */ = {
 			isa = PBXGroup;
 			children = (
-				7B0CE39D1BBE2A270035310D /* Service Layer */,
-				7B85BD8F1BBE219D0057069F /* Cell */,
-				7B85BD8A1BBE1EFB0057069F /* Assets */,
 				7B85BD891BBE1EE80057069F /* AppDelegate */,
+				7B85BD8A1BBE1EFB0057069F /* Assets */,
+				7B85BD8F1BBE219D0057069F /* Cell */,
 				7B85BD861BBE1E900057069F /* Controller */,
 				7B85BD871BBE1E980057069F /* Model */,
+				7B0CE39D1BBE2A270035310D /* Service Layer */,
 				7B85BD881BBE1EAE0057069F /* View */,
 			);
 			path = task;
@@ -424,6 +429,7 @@
 				7B85BD8E1BBE1F9A0057069F /* MainViewController.m in Sources */,
 				7B8C6BA21BBE2C740043165C /* Routes.m in Sources */,
 				7B8C6B9B1BBE2BE50043165C /* Connection.m in Sources */,
+				7B04FD021BBEB40F00FBB683 /* Constants.m in Sources */,
 				7B8C6B9E1BBE2C1A0043165C /* JWNetAPIClient.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

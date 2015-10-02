@@ -13,6 +13,7 @@
 #import "Reachability.h"
 
 // Service Layer
+#import "Constants.h"
 #import "JWNetAPIClient.h"
 #import "Routes.h"
 
@@ -56,6 +57,8 @@
         [[JWNetAPIClient sharedClient] setRequestSerializer:[AFHTTPRequestSerializer serializer]];
     } else {
         [[JWNetAPIClient sharedClient] setRequestSerializer:[AFJSONRequestSerializer serializer]];
+        [[JWNetAPIClient sharedClient].requestSerializer setValue:kTraktAPIKey forHTTPHeaderField:@"trakt-api-key"];
+        [[JWNetAPIClient sharedClient].requestSerializer setValue:kTraktAPIVersion forHTTPHeaderField:@"trakt-api-version"];
     }
     
     if ( method == RequestMethodGet ) {
