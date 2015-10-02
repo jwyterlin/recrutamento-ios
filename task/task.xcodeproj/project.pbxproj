@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		7B04FD021BBEB40F00FBB683 /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B04FD011BBEB40F00FBB683 /* Constants.m */; settings = {ASSET_TAGS = (); }; };
+		7B04FD061BBEB5E800FBB683 /* ShowDAO.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B04FD051BBEB5E800FBB683 /* ShowDAO.m */; settings = {ASSET_TAGS = (); }; };
+		7B04FD091BBEB61200FBB683 /* GenericDAO.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B04FD081BBEB61200FBB683 /* GenericDAO.m */; settings = {ASSET_TAGS = (); }; };
 		7B85BD591BBE1DB10057069F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B85BD581BBE1DB10057069F /* AppDelegate.swift */; };
 		7B85BD5E1BBE1DB10057069F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B85BD5C1BBE1DB10057069F /* Main.storyboard */; };
 		7B85BD601BBE1DB10057069F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7B85BD5F1BBE1DB10057069F /* Assets.xcassets */; };
@@ -44,6 +46,10 @@
 		5CFD178B37BA50DF0027E1A3 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		7B04FD001BBEB40F00FBB683 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Constants.h; path = "Service Layer/Constants.h"; sourceTree = "<group>"; };
 		7B04FD011BBEB40F00FBB683 /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Constants.m; path = "Service Layer/Constants.m"; sourceTree = "<group>"; };
+		7B04FD041BBEB5E800FBB683 /* ShowDAO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ShowDAO.h; path = DAO/ShowDAO.h; sourceTree = "<group>"; };
+		7B04FD051BBEB5E800FBB683 /* ShowDAO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ShowDAO.m; path = DAO/ShowDAO.m; sourceTree = "<group>"; };
+		7B04FD071BBEB61200FBB683 /* GenericDAO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GenericDAO.h; path = DAO/GenericDAO.h; sourceTree = "<group>"; };
+		7B04FD081BBEB61200FBB683 /* GenericDAO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GenericDAO.m; path = DAO/GenericDAO.m; sourceTree = "<group>"; };
 		7B85BD551BBE1DB10057069F /* task.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = task.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B85BD581BBE1DB10057069F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7B85BD5D1BBE1DB10057069F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -113,6 +119,17 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		7B04FD031BBEB5B900FBB683 /* DAO */ = {
+			isa = PBXGroup;
+			children = (
+				7B04FD041BBEB5E800FBB683 /* ShowDAO.h */,
+				7B04FD051BBEB5E800FBB683 /* ShowDAO.m */,
+				7B04FD071BBEB61200FBB683 /* GenericDAO.h */,
+				7B04FD081BBEB61200FBB683 /* GenericDAO.m */,
+			);
+			name = DAO;
+			sourceTree = "<group>";
+		};
 		7B0CE39D1BBE2A270035310D /* Service Layer */ = {
 			isa = PBXGroup;
 			children = (
@@ -148,6 +165,7 @@
 		7B85BD571BBE1DB10057069F /* task */ = {
 			isa = PBXGroup;
 			children = (
+				7B04FD031BBEB5B900FBB683 /* DAO */,
 				7B85BD891BBE1EE80057069F /* AppDelegate */,
 				7B85BD8A1BBE1EFB0057069F /* Assets */,
 				7B85BD8F1BBE219D0057069F /* Cell */,
@@ -424,10 +442,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7B04FD061BBEB5E800FBB683 /* ShowDAO.m in Sources */,
 				7B85BD591BBE1DB10057069F /* AppDelegate.swift in Sources */,
 				7B85BD941BBE22360057069F /* ShowCollectionViewCell.m in Sources */,
 				7B85BD8E1BBE1F9A0057069F /* MainViewController.m in Sources */,
 				7B8C6BA21BBE2C740043165C /* Routes.m in Sources */,
+				7B04FD091BBEB61200FBB683 /* GenericDAO.m in Sources */,
 				7B8C6B9B1BBE2BE50043165C /* Connection.m in Sources */,
 				7B04FD021BBEB40F00FBB683 /* Constants.m in Sources */,
 				7B8C6B9E1BBE2C1A0043165C /* JWNetAPIClient.m in Sources */,

@@ -21,7 +21,11 @@
 }
 
 +(NSString *)BASE_URL_API {
-    return [NSString stringWithFormat:@"%@",[Routes BASE_URL]];
+    return [NSString stringWithFormat:@"%@/",[Routes BASE_URL]];
+}
+
++(NSString *)WS_SHOWS_POPULAR {
+    return @"shows/popular";
 }
 
 @end

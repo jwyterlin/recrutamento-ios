@@ -11,6 +11,9 @@
 // Cell
 #import "ShowCollectionViewCell.h"
 
+// DAO
+#import "ShowDAO.h"
+
 @interface MainViewController()
 
 @property(nonatomic,strong) NSArray *shows;
@@ -34,6 +37,8 @@ static NSString * const reuseIdentifier = @"ShowCollectionViewCell";
     [self.collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:reuseIdentifier];
     
     // Do any additional setup after loading the view.
+    
+    [self downloadShows];
     
 }
 
@@ -102,5 +107,30 @@ static NSString * const reuseIdentifier = @"ShowCollectionViewCell";
 }
  
 */
+
+#pragma mark - Private methods
+
+-(void)downloadShows {
+    
+    [[ShowDAO new] showsPopularWithCompletion:^(NSArray *shows, BOOL hasNoConnection, NSError *error) {
+       
+        if ( hasNoConnection ) {
+            // TODO:
+            //
+            // Show No Connection
+            return;
+        }
+        
+        if ( error ) {
+            // TODO:
+            //
+            // Show error
+        }
+        
+        // Success
+        
+    }];
+    
+}
 
 @end
