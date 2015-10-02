@@ -25,6 +25,8 @@
 
 @property(nonatomic,strong) NSArray *shows;
 
+@property(nonatomic,strong) UIRefreshControl *refresh;
+
 @end
 
 @implementation MainViewController
@@ -40,6 +42,8 @@ static NSString * const reuseIdentifier = @"ShowCollectionViewCell";
     // Register cell classes
     UINib *nib = [UINib nibWithNibName:reuseIdentifier bundle:nil];
     [self.collectionView registerNib:nib forCellWithReuseIdentifier:reuseIdentifier];
+    
+    [self.collectionView addSubview:self.refresh];
     
     [self downloadShows];
     
@@ -161,6 +165,8 @@ static NSString * const reuseIdentifier = @"ShowCollectionViewCell";
     
     [[ShowDAO new] showsPopularWithCompletion:^(NSArray *shows, BOOL hasNoConnection, NSError *error) {
        
+        [self.refresh endRefreshing];
+        
         if ( hasNoConnection ) {
             
             // Show No Connection
@@ -183,6 +189,22 @@ static NSString * const reuseIdentifier = @"ShowCollectionViewCell";
         [self.collectionView reloadData];
         
     }];
+    
+}
+
+#pragma mark - Lazy instances
+
+-(UIRefreshControl *)refresh {
+    
+    if ( ! _refresh ) {
+        
+        _refresh = [UIRefreshControl new];
+        [_refresh addTarget:self action:@selector(downloadShows) forControlEvents:UIControlEventValueChanged];
+        _refresh.tintColor = [UIColor lightGrayColor];
+        
+    }
+    
+    return _refresh;
     
 }
 
