@@ -37,7 +37,8 @@ static NSString * const reuseIdentifier = @"ShowCollectionViewCell";
     // self.clearsSelectionOnViewWillAppear = NO;
     
     // Register cell classes
-    [self.collectionView registerClass:[ShowCollectionViewCell class] forCellWithReuseIdentifier:reuseIdentifier];
+    UINib *nib = [UINib nibWithNibName:reuseIdentifier bundle:nil];
+    [self.collectionView registerNib:nib forCellWithReuseIdentifier:reuseIdentifier];
     
     // Do any additional setup after loading the view.
     
@@ -56,17 +57,21 @@ static NSString * const reuseIdentifier = @"ShowCollectionViewCell";
 }
 
 -(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    NSLog(@"self.shows.count: %i", (int)self.shows.count );
     return self.shows.count;
 }
 
 -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView
                  cellForItemAtIndexPath:(NSIndexPath *)indexPath {
 
-    ShowCollectionViewCell *cell = (ShowCollectionViewCell *)[collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
+    ShowCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
     
+    ShowModel *show = self.shows[indexPath.row];
+    
+    [cell.loading stopAnimating];
+    
+    cell.title.text = show.title;
     cell.imageShow.backgroundColor = [UIColor yellowColor];
-    cell.backgroundColor = [UIColor blackColor];
+    cell.backgroundColor = [UIColor colorWithWhite:0.8 alpha:1.0];
     
     return cell;
 }
@@ -115,8 +120,8 @@ static NSString * const reuseIdentifier = @"ShowCollectionViewCell";
 
 #pragma mark - UICollectionViewDelegateFlowLayout methods
 
--(CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
-    return CGSizeMake( 180, 274 );
+-(CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
+    return CGSizeMake( 180, 329 );
 }
 
 #pragma mark - Private methods
@@ -126,16 +131,22 @@ static NSString * const reuseIdentifier = @"ShowCollectionViewCell";
     [[ShowDAO new] showsPopularWithCompletion:^(NSArray *shows, BOOL hasNoConnection, NSError *error) {
        
         if ( hasNoConnection ) {
+            
             // TODO:
             //
             // Show No Connection
+            
             return;
+            
         }
         
         if ( error ) {
+            
             // TODO:
             //
             // Show error
+            return;
+            
         }
         
         // Success

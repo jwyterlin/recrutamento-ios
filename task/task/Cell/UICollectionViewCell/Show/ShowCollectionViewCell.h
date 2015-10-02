@@ -10,6 +10,8 @@
 
 @interface ShowCollectionViewCell : UICollectionViewCell
 
-@property(weak,nonatomic) IBOutlet UIImageView *imageShow;
+@property(strong,nonatomic) IBOutlet UIImageView *imageShow;
+@property(strong,nonatomic) IBOutlet UILabel *title;
+@property(strong,nonatomic) IBOutlet UIActivityIndicatorView *loading;
 
 @end

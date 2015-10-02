@@ -10,4 +10,12 @@
 
 @implementation ShowCollectionViewCell
 
+-(void)awakeFromNib {
+    
+}
+
+-(void)setSelected:(BOOL)selected  {
+    [super setSelected:selected];
+}
+
 @end
