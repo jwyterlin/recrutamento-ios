@@ -20,6 +20,7 @@
 		7B069F0D1BBEEA770008AE17 /* ImageDAO.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B069F0C1BBEEA770008AE17 /* ImageDAO.m */; settings = {ASSET_TAGS = (); }; };
 		7B069F101BBEEEBB0008AE17 /* Alert.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B069F0F1BBEEEBB0008AE17 /* Alert.m */; settings = {ASSET_TAGS = (); }; };
 		7B069F131BBEF6820008AE17 /* CATransformLayer+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B069F121BBEF6820008AE17 /* CATransformLayer+Helper.m */; settings = {ASSET_TAGS = (); }; };
+		7B069F151BBEF94C0008AE17 /* ShowDAO.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B04FD051BBEB5E800FBB683 /* ShowDAO.m */; settings = {ASSET_TAGS = (); }; };
 		7B85BD591BBE1DB10057069F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B85BD581BBE1DB10057069F /* AppDelegate.swift */; };
 		7B85BD5E1BBE1DB10057069F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B85BD5C1BBE1DB10057069F /* Main.storyboard */; };
 		7B85BD601BBE1DB10057069F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7B85BD5F1BBE1DB10057069F /* Assets.xcassets */; };
@@ -533,6 +534,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7B85BD6E1BBE1DB10057069F /* taskTests.swift in Sources */,
+				7B069F151BBEF94C0008AE17 /* ShowDAO.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
