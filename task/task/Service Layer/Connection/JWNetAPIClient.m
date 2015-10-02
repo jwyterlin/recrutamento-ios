@@ -21,8 +21,6 @@
         _sharedClient = [[JWNetAPIClient alloc] initWithBaseURL:[NSURL URLWithString:[Routes BASE_URL_API]]];
         _sharedClient.responseSerializer = [AFJSONResponseSerializer serializer];
         _sharedClient.requestSerializer = [AFHTTPRequestSerializer serializer];
-        //_sharedClient.securityPolicy = [AFSecurityPolicy policyWithPinningMode:AFSSLPinningModeCertificate];
-        //_sharedClient.securityPolicy.allowInvalidCertificates = YES;
         
     });
     
