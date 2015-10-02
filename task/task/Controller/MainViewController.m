@@ -14,6 +14,9 @@
 // DAO
 #import "ShowDAO.h"
 
+// Model
+#import "ShowModel.h"
+
 @interface MainViewController()
 
 @property(nonatomic,strong) NSArray *shows;
@@ -34,7 +37,7 @@ static NSString * const reuseIdentifier = @"ShowCollectionViewCell";
     // self.clearsSelectionOnViewWillAppear = NO;
     
     // Register cell classes
-    [self.collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:reuseIdentifier];
+    [self.collectionView registerClass:[ShowCollectionViewCell class] forCellWithReuseIdentifier:reuseIdentifier];
     
     // Do any additional setup after loading the view.
     
@@ -53,15 +56,17 @@ static NSString * const reuseIdentifier = @"ShowCollectionViewCell";
 }
 
 -(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
+    NSLog(@"self.shows.count: %i", (int)self.shows.count );
     return self.shows.count;
 }
 
 -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView
                  cellForItemAtIndexPath:(NSIndexPath *)indexPath {
 
-    ShowCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
+    ShowCollectionViewCell *cell = (ShowCollectionViewCell *)[collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
     
-    // Configure the cell
+    cell.imageShow.backgroundColor = [UIColor yellowColor];
+    cell.backgroundColor = [UIColor blackColor];
     
     return cell;
 }
@@ -108,6 +113,12 @@ static NSString * const reuseIdentifier = @"ShowCollectionViewCell";
  
 */
 
+#pragma mark - UICollectionViewDelegateFlowLayout methods
+
+-(CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
+    return CGSizeMake( 180, 274 );
+}
+
 #pragma mark - Private methods
 
 -(void)downloadShows {
@@ -128,6 +139,9 @@ static NSString * const reuseIdentifier = @"ShowCollectionViewCell";
         }
         
         // Success
+        self.shows = shows;
+        
+        [self.collectionView reloadData];
         
     }];
     

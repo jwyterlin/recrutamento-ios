@@ -8,10 +8,14 @@
         <scene sceneID="tSF-l7-v8n">
             <objects>
                 <navigationController id="c4w-UC-VpE" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="zPL-qQ-YX3">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="zPL-qQ-YX3">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <animations/>
+                        <color key="barTintColor" red="0.96078431372549022" green="0.61176470588235299" blue="0.36470588235294116" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </textAttributes>
                     </navigationBar>
                     <connections>
                         <segue destination="1aQ-aa-I1r" kind="relationship" relationship="rootViewController" id="w2v-Kf-6Rp"/>
@@ -21,14 +25,15 @@
             </objects>
             <point key="canvasLocation" x="-70" y="-13"/>
         </scene>
-        <!--Main View Controller-->
+        <!--Shows-->
         <scene sceneID="64Q-w7-g7e">
             <objects>
                 <collectionViewController id="1aQ-aa-I1r" customClass="MainViewController" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="wnk-qV-rN3">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="64" width="600" height="536"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="nlQ-Ub-BVf">
                             <size key="itemSize" width="180" height="274"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -37,7 +42,7 @@
                         </collectionViewFlowLayout>
                         <cells>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ShowCollectionViewCell" id="9di-2a-s1t" customClass="ShowCollectionViewCell">
-                                <rect key="frame" x="0.0" y="64" width="180" height="274"/>
+                                <rect key="frame" x="0.0" y="0.0" width="180" height="274"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                     <rect key="frame" x="0.0" y="0.0" width="180" height="274"/>
@@ -68,7 +73,7 @@
                             <outlet property="delegate" destination="1aQ-aa-I1r" id="6ef-xK-2gY"/>
                         </connections>
                     </collectionView>
-                    <navigationItem key="navigationItem" id="F4G-4m-p1P"/>
+                    <navigationItem key="navigationItem" title="Shows" id="F4G-4m-p1P"/>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SYZ-0J-Ldp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

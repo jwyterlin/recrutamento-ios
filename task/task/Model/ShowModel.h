@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 #import "GenericModel.h"
 
@@ -17,5 +18,6 @@
 @property(nonatomic,strong) NSString *title;
 @property(nonatomic,strong) NSNumber *year;
 @property(nonatomic,strong) ShowIDModel *showID;
+@property(nonatomic,strong) UIImage *image;
 
 @end
