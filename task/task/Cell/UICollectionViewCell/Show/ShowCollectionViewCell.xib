@@ -22,15 +22,24 @@
                 <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="CLU-CR-bbl">
                     <rect key="frame" x="72" y="118" width="37" height="37"/>
                 </activityIndicatorView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No Image Found" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Aas-LE-bZC">
+                    <rect key="frame" x="8" y="126" width="164" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
+                <constraint firstItem="Aas-LE-bZC" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="2To-sv-GGJ"/>
                 <constraint firstItem="F2P-tH-2n0" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="5KA-yy-r1u"/>
                 <constraint firstItem="kyz-JH-jSm" firstAttribute="top" secondItem="F2P-tH-2n0" secondAttribute="bottom" constant="5" id="6Ml-2H-9uv"/>
                 <constraint firstItem="F2P-tH-2n0" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="9eK-xy-Co8"/>
+                <constraint firstAttribute="trailing" secondItem="Aas-LE-bZC" secondAttribute="trailing" constant="8" id="H4Q-ep-UA3"/>
                 <constraint firstItem="kyz-JH-jSm" firstAttribute="top" secondItem="F2P-tH-2n0" secondAttribute="bottom" constant="5" id="Kez-iJ-e9e"/>
                 <constraint firstAttribute="trailing" secondItem="kyz-JH-jSm" secondAttribute="trailing" constant="8" id="NLu-fb-67k"/>
                 <constraint firstAttribute="bottom" secondItem="kyz-JH-jSm" secondAttribute="bottom" constant="8" id="QjM-qR-daj"/>
+                <constraint firstItem="Aas-LE-bZC" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" constant="-26" id="UYJ-iz-PFc"/>
                 <constraint firstItem="CLU-CR-bbl" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" constant="-26" id="e5k-6K-k4c"/>
                 <constraint firstAttribute="bottom" secondItem="F2P-tH-2n0" secondAttribute="bottom" constant="52" id="ezA-YR-eyV"/>
                 <constraint firstItem="kyz-JH-jSm" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="kBW-kh-TDg"/>
@@ -46,6 +55,7 @@
             <connections>
                 <outlet property="imageShow" destination="F2P-tH-2n0" id="whi-lu-3hU"/>
                 <outlet property="loading" destination="CLU-CR-bbl" id="Kf8-oZ-wRW"/>
+                <outlet property="noImage" destination="Aas-LE-bZC" id="ZNb-PO-0l0"/>
                 <outlet property="title" destination="kyz-JH-jSm" id="XCK-F2-v6Z"/>
             </connections>
             <point key="canvasLocation" x="298" y="308"/>

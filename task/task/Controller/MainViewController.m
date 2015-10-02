@@ -67,6 +67,7 @@ static NSString * const reuseIdentifier = @"ShowCollectionViewCell";
     ShowModel *show = self.shows[indexPath.row];
     
     [cell.loading stopAnimating];
+    cell.noImage.hidden = YES;
     
     cell.title.text = show.title;
     cell.imageShow.backgroundColor = [UIColor blackColor];
@@ -86,20 +87,18 @@ static NSString * const reuseIdentifier = @"ShowCollectionViewCell";
         
         [cell.loading stopAnimating];
 
-        if ( image ) {
+        ShowCollectionViewCell *helperCell = (ShowCollectionViewCell *)[collectionView cellForItemAtIndexPath:indexPath];
         
-            ShowCollectionViewCell *helperCell = (ShowCollectionViewCell *)[collectionView cellForItemAtIndexPath:indexPath];
+        if ( helperCell ) {
             
-            if ( helperCell ) {
+            helperCell.noImage.hidden = (image != nil);
+            
+            if ( image ) {
+                
                 show.imagePoster = image;
                 helperCell.imageShow.image = image;
+                
             }
-            
-        } else {
-            
-            // TODO:
-            //
-            // Show No Image
             
         }
         
