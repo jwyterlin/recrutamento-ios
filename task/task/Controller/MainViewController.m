@@ -13,9 +13,13 @@
 
 // DAO
 #import "ShowDAO.h"
+#import "ImageDAO.h"
 
 // Model
 #import "ShowModel.h"
+
+// Service Layer
+#import "Alert.h"
 
 @interface MainViewController()
 
@@ -33,14 +37,9 @@ static NSString * const reuseIdentifier = @"ShowCollectionViewCell";
     
     [super viewDidLoad];
     
-    // Uncomment the following line to preserve selection between presentations
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
     // Register cell classes
     UINib *nib = [UINib nibWithNibName:reuseIdentifier bundle:nil];
     [self.collectionView registerNib:nib forCellWithReuseIdentifier:reuseIdentifier];
-    
-    // Do any additional setup after loading the view.
     
     [self downloadShows];
     
@@ -70,10 +69,41 @@ static NSString * const reuseIdentifier = @"ShowCollectionViewCell";
     [cell.loading stopAnimating];
     
     cell.title.text = show.title;
-    cell.imageShow.backgroundColor = [UIColor yellowColor];
-    cell.backgroundColor = [UIColor colorWithWhite:0.8 alpha:1.0];
+    cell.imageShow.backgroundColor = [UIColor blackColor];
 
-    NSLog(@"url banner: %@", show.urlImageBanner);
+    if ( show.imagePoster ) {
+        
+        cell.imageShow.image = show.imagePoster;
+        return cell;
+        
+    }
+    
+    cell.imageShow.image = nil;
+    
+    [cell.loading startAnimating];
+    
+    [[ImageDAO new] imageByUrl:show.urlImagePoster completion:^(UIImage *image) {
+        
+        [cell.loading stopAnimating];
+
+        if ( image ) {
+        
+            ShowCollectionViewCell *helperCell = (ShowCollectionViewCell *)[collectionView cellForItemAtIndexPath:indexPath];
+            
+            if ( helperCell ) {
+                show.imagePoster = image;
+                helperCell.imageShow.image = image;
+            }
+            
+        } else {
+            
+            // TODO:
+            //
+            // Show No Image
+            
+        }
+        
+    }];
     
     return cell;
 }
@@ -134,19 +164,16 @@ static NSString * const reuseIdentifier = @"ShowCollectionViewCell";
        
         if ( hasNoConnection ) {
             
-            // TODO:
-            //
             // Show No Connection
-            
+            [[Alert new] showNoConnectionWithViewController:self];
             return;
             
         }
         
         if ( error ) {
             
-            // TODO:
-            //
             // Show error
+            [[Alert new] showError:error viewController:self];
             return;
             
         }

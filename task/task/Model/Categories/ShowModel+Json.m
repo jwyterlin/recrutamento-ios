@@ -11,23 +11,6 @@
 
 @implementation ShowModel (Json)
 
-/*
- 
- {
-    "title": "Band of Brothers",
-    "year": 2001,
-    "ids": {
-        "trakt": 4589,
-        "slug": "band-of-brothers",
-        "tvdb": 74205,
-        "imdb": "tt0185906",
-        "tmdb": 4613,
-        "tvrage": 2708
-    }
- }
- 
- */
-
 -(ShowModel *)setupWithJson:(NSDictionary *)json {
     
     if ( ! [Validator validateObject:json] )
@@ -35,12 +18,17 @@
     
     ShowModel *showModel = [ShowModel new];
     
+    // Title
     showModel.title = json[@"title"];
+    
+    // Year
     showModel.year = [NSNumber numberWithInt:[json[@"year"] intValue]];
     
+    // IDs
     ShowIDModel *showIDModel = [[ShowIDModel new] setupWithJson:json[@"ids"]];
     showModel.showID = showIDModel;
     
+    // Images
     if ( [Validator validateObject:json[@"images"]] ) {
         
         NSDictionary *images = json[@"images"];

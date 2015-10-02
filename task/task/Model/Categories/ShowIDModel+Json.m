@@ -10,19 +10,6 @@
 
 @implementation ShowIDModel (Json)
 
-/*
-
- {
-    "trakt": 4589,
-    "slug": "band-of-brothers",
-    "tvdb": 74205,
-    "imdb": "tt0185906",
-    "tmdb": 4613,
-    "tvrage": 2708
- }
-
-*/
-
 -(ShowIDModel *)setupWithJson:(NSDictionary *)json {
     
     if ( ! [Validator validateObject:json] )

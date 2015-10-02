@@ -17,6 +17,8 @@
 		7B04FD191BBEC15300FBB683 /* ShowIDModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B04FD181BBEC15300FBB683 /* ShowIDModel.m */; settings = {ASSET_TAGS = (); }; };
 		7B04FD1C1BBEC1CF00FBB683 /* ShowIDModel+Json.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B04FD1B1BBEC1CF00FBB683 /* ShowIDModel+Json.m */; settings = {ASSET_TAGS = (); }; };
 		7B069F0A1BBED9C50008AE17 /* ShowCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B069F091BBED9C50008AE17 /* ShowCollectionViewCell.xib */; settings = {ASSET_TAGS = (); }; };
+		7B069F0D1BBEEA770008AE17 /* ImageDAO.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B069F0C1BBEEA770008AE17 /* ImageDAO.m */; settings = {ASSET_TAGS = (); }; };
+		7B069F101BBEEEBB0008AE17 /* Alert.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B069F0F1BBEEEBB0008AE17 /* Alert.m */; settings = {ASSET_TAGS = (); }; };
 		7B85BD591BBE1DB10057069F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B85BD581BBE1DB10057069F /* AppDelegate.swift */; };
 		7B85BD5E1BBE1DB10057069F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B85BD5C1BBE1DB10057069F /* Main.storyboard */; };
 		7B85BD601BBE1DB10057069F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7B85BD5F1BBE1DB10057069F /* Assets.xcassets */; };
@@ -70,6 +72,10 @@
 		7B04FD1A1BBEC1CF00FBB683 /* ShowIDModel+Json.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "ShowIDModel+Json.h"; path = "Model/Categories/ShowIDModel+Json.h"; sourceTree = "<group>"; };
 		7B04FD1B1BBEC1CF00FBB683 /* ShowIDModel+Json.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "ShowIDModel+Json.m"; path = "Model/Categories/ShowIDModel+Json.m"; sourceTree = "<group>"; };
 		7B069F091BBED9C50008AE17 /* ShowCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ShowCollectionViewCell.xib; path = Cell/UICollectionViewCell/Show/ShowCollectionViewCell.xib; sourceTree = "<group>"; };
+		7B069F0B1BBEEA770008AE17 /* ImageDAO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ImageDAO.h; path = DAO/ImageDAO.h; sourceTree = "<group>"; };
+		7B069F0C1BBEEA770008AE17 /* ImageDAO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ImageDAO.m; path = DAO/ImageDAO.m; sourceTree = "<group>"; };
+		7B069F0E1BBEEEBB0008AE17 /* Alert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Alert.h; path = "Service Layer/Alert.h"; sourceTree = "<group>"; };
+		7B069F0F1BBEEEBB0008AE17 /* Alert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Alert.m; path = "Service Layer/Alert.m"; sourceTree = "<group>"; };
 		7B85BD551BBE1DB10057069F /* task.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = task.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B85BD581BBE1DB10057069F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7B85BD5D1BBE1DB10057069F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -146,6 +152,8 @@
 				7B04FD051BBEB5E800FBB683 /* ShowDAO.m */,
 				7B04FD071BBEB61200FBB683 /* GenericDAO.h */,
 				7B04FD081BBEB61200FBB683 /* GenericDAO.m */,
+				7B069F0B1BBEEA770008AE17 /* ImageDAO.h */,
+				7B069F0C1BBEEA770008AE17 /* ImageDAO.m */,
 			);
 			name = DAO;
 			sourceTree = "<group>";
@@ -164,6 +172,8 @@
 		7B0CE39D1BBE2A270035310D /* Service Layer */ = {
 			isa = PBXGroup;
 			children = (
+				7B069F0E1BBEEEBB0008AE17 /* Alert.h */,
+				7B069F0F1BBEEEBB0008AE17 /* Alert.m */,
 				7B8C6B981BBE2BBF0043165C /* Connection */,
 				7B04FD001BBEB40F00FBB683 /* Constants.h */,
 				7B04FD011BBEB40F00FBB683 /* Constants.m */,
@@ -490,12 +500,14 @@
 				7B85BD941BBE22360057069F /* ShowCollectionViewCell.m in Sources */,
 				7B85BD8E1BBE1F9A0057069F /* MainViewController.m in Sources */,
 				7B8C6BA21BBE2C740043165C /* Routes.m in Sources */,
+				7B069F101BBEEEBB0008AE17 /* Alert.m in Sources */,
 				7B04FD091BBEB61200FBB683 /* GenericDAO.m in Sources */,
 				7B04FD131BBEBEB500FBB683 /* ShowModel+Json.m in Sources */,
 				7B04FD191BBEC15300FBB683 /* ShowIDModel.m in Sources */,
 				7B8C6B9B1BBE2BE50043165C /* Connection.m in Sources */,
 				7B04FD0C1BBEBE5300FBB683 /* GenericModel.m in Sources */,
 				7B04FD161BBEBF7200FBB683 /* Validator.m in Sources */,
+				7B069F0D1BBEEA770008AE17 /* ImageDAO.m in Sources */,
 				7B04FD021BBEB40F00FBB683 /* Constants.m in Sources */,
 				7B8C6B9E1BBE2C1A0043165C /* JWNetAPIClient.m in Sources */,
 				7B04FD0F1BBEBE6700FBB683 /* ShowModel.m in Sources */,
