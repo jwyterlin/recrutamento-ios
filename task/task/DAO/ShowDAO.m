@@ -8,6 +8,9 @@
 
 #import "ShowDAO.h"
 
+// Model
+#import "ShowModel+Json.h"
+
 @implementation ShowDAO
 
 -(void)showsPopularWithCompletion:(void(^)(NSArray *shows, BOOL hasNoConnection, NSError *error))completion {
@@ -34,16 +37,7 @@
         
         NSArray *results = (NSArray *)[responseData copy];
         
-        NSMutableArray *shows = [NSMutableArray new];
-        
-        for ( NSDictionary *json in results ) {
-            
-            // TODO:
-            //
-            // Mount objects
-            NSLog( @"json: %@", json );
-            
-        }
+        NSArray *shows = [[ShowModel new] setupListWithJson:results];
         
         if ( completion ) {
             completion( shows, NO, nil );

@@ -10,6 +10,12 @@
 		7B04FD021BBEB40F00FBB683 /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B04FD011BBEB40F00FBB683 /* Constants.m */; settings = {ASSET_TAGS = (); }; };
 		7B04FD061BBEB5E800FBB683 /* ShowDAO.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B04FD051BBEB5E800FBB683 /* ShowDAO.m */; settings = {ASSET_TAGS = (); }; };
 		7B04FD091BBEB61200FBB683 /* GenericDAO.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B04FD081BBEB61200FBB683 /* GenericDAO.m */; settings = {ASSET_TAGS = (); }; };
+		7B04FD0C1BBEBE5300FBB683 /* GenericModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B04FD0B1BBEBE5300FBB683 /* GenericModel.m */; settings = {ASSET_TAGS = (); }; };
+		7B04FD0F1BBEBE6700FBB683 /* ShowModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B04FD0E1BBEBE6700FBB683 /* ShowModel.m */; settings = {ASSET_TAGS = (); }; };
+		7B04FD131BBEBEB500FBB683 /* ShowModel+Json.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B04FD121BBEBEB500FBB683 /* ShowModel+Json.m */; settings = {ASSET_TAGS = (); }; };
+		7B04FD161BBEBF7200FBB683 /* Validator.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B04FD151BBEBF7200FBB683 /* Validator.m */; settings = {ASSET_TAGS = (); }; };
+		7B04FD191BBEC15300FBB683 /* ShowIDModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B04FD181BBEC15300FBB683 /* ShowIDModel.m */; settings = {ASSET_TAGS = (); }; };
+		7B04FD1C1BBEC1CF00FBB683 /* ShowIDModel+Json.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B04FD1B1BBEC1CF00FBB683 /* ShowIDModel+Json.m */; settings = {ASSET_TAGS = (); }; };
 		7B85BD591BBE1DB10057069F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B85BD581BBE1DB10057069F /* AppDelegate.swift */; };
 		7B85BD5E1BBE1DB10057069F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B85BD5C1BBE1DB10057069F /* Main.storyboard */; };
 		7B85BD601BBE1DB10057069F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7B85BD5F1BBE1DB10057069F /* Assets.xcassets */; };
@@ -50,6 +56,18 @@
 		7B04FD051BBEB5E800FBB683 /* ShowDAO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ShowDAO.m; path = DAO/ShowDAO.m; sourceTree = "<group>"; };
 		7B04FD071BBEB61200FBB683 /* GenericDAO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GenericDAO.h; path = DAO/GenericDAO.h; sourceTree = "<group>"; };
 		7B04FD081BBEB61200FBB683 /* GenericDAO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GenericDAO.m; path = DAO/GenericDAO.m; sourceTree = "<group>"; };
+		7B04FD0A1BBEBE5300FBB683 /* GenericModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GenericModel.h; path = Model/GenericModel.h; sourceTree = "<group>"; };
+		7B04FD0B1BBEBE5300FBB683 /* GenericModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GenericModel.m; path = Model/GenericModel.m; sourceTree = "<group>"; };
+		7B04FD0D1BBEBE6700FBB683 /* ShowModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ShowModel.h; path = Model/ShowModel.h; sourceTree = "<group>"; };
+		7B04FD0E1BBEBE6700FBB683 /* ShowModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ShowModel.m; path = Model/ShowModel.m; sourceTree = "<group>"; };
+		7B04FD111BBEBEB500FBB683 /* ShowModel+Json.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "ShowModel+Json.h"; path = "Model/Categories/ShowModel+Json.h"; sourceTree = "<group>"; };
+		7B04FD121BBEBEB500FBB683 /* ShowModel+Json.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "ShowModel+Json.m"; path = "Model/Categories/ShowModel+Json.m"; sourceTree = "<group>"; };
+		7B04FD141BBEBF7200FBB683 /* Validator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Validator.h; path = "Service Layer/Validator.h"; sourceTree = "<group>"; };
+		7B04FD151BBEBF7200FBB683 /* Validator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Validator.m; path = "Service Layer/Validator.m"; sourceTree = "<group>"; };
+		7B04FD171BBEC15300FBB683 /* ShowIDModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ShowIDModel.h; path = Model/ShowIDModel.h; sourceTree = "<group>"; };
+		7B04FD181BBEC15300FBB683 /* ShowIDModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ShowIDModel.m; path = Model/ShowIDModel.m; sourceTree = "<group>"; };
+		7B04FD1A1BBEC1CF00FBB683 /* ShowIDModel+Json.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "ShowIDModel+Json.h"; path = "Model/Categories/ShowIDModel+Json.h"; sourceTree = "<group>"; };
+		7B04FD1B1BBEC1CF00FBB683 /* ShowIDModel+Json.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "ShowIDModel+Json.m"; path = "Model/Categories/ShowIDModel+Json.m"; sourceTree = "<group>"; };
 		7B85BD551BBE1DB10057069F /* task.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = task.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B85BD581BBE1DB10057069F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7B85BD5D1BBE1DB10057069F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -130,12 +148,25 @@
 			name = DAO;
 			sourceTree = "<group>";
 		};
+		7B04FD101BBEBE8900FBB683 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				7B04FD111BBEBEB500FBB683 /* ShowModel+Json.h */,
+				7B04FD121BBEBEB500FBB683 /* ShowModel+Json.m */,
+				7B04FD1A1BBEC1CF00FBB683 /* ShowIDModel+Json.h */,
+				7B04FD1B1BBEC1CF00FBB683 /* ShowIDModel+Json.m */,
+			);
+			name = Categories;
+			sourceTree = "<group>";
+		};
 		7B0CE39D1BBE2A270035310D /* Service Layer */ = {
 			isa = PBXGroup;
 			children = (
 				7B8C6B981BBE2BBF0043165C /* Connection */,
 				7B04FD001BBEB40F00FBB683 /* Constants.h */,
 				7B04FD011BBEB40F00FBB683 /* Constants.m */,
+				7B04FD141BBEBF7200FBB683 /* Validator.h */,
+				7B04FD151BBEBF7200FBB683 /* Validator.m */,
 			);
 			name = "Service Layer";
 			sourceTree = "<group>";
@@ -165,11 +196,11 @@
 		7B85BD571BBE1DB10057069F /* task */ = {
 			isa = PBXGroup;
 			children = (
-				7B04FD031BBEB5B900FBB683 /* DAO */,
 				7B85BD891BBE1EE80057069F /* AppDelegate */,
 				7B85BD8A1BBE1EFB0057069F /* Assets */,
 				7B85BD8F1BBE219D0057069F /* Cell */,
 				7B85BD861BBE1E900057069F /* Controller */,
+				7B04FD031BBEB5B900FBB683 /* DAO */,
 				7B85BD871BBE1E980057069F /* Model */,
 				7B0CE39D1BBE2A270035310D /* Service Layer */,
 				7B85BD881BBE1EAE0057069F /* View */,
@@ -208,6 +239,13 @@
 		7B85BD871BBE1E980057069F /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				7B04FD101BBEBE8900FBB683 /* Categories */,
+				7B04FD0A1BBEBE5300FBB683 /* GenericModel.h */,
+				7B04FD0B1BBEBE5300FBB683 /* GenericModel.m */,
+				7B04FD0D1BBEBE6700FBB683 /* ShowModel.h */,
+				7B04FD0E1BBEBE6700FBB683 /* ShowModel.m */,
+				7B04FD171BBEC15300FBB683 /* ShowIDModel.h */,
+				7B04FD181BBEC15300FBB683 /* ShowIDModel.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -442,15 +480,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7B04FD1C1BBEC1CF00FBB683 /* ShowIDModel+Json.m in Sources */,
 				7B04FD061BBEB5E800FBB683 /* ShowDAO.m in Sources */,
 				7B85BD591BBE1DB10057069F /* AppDelegate.swift in Sources */,
 				7B85BD941BBE22360057069F /* ShowCollectionViewCell.m in Sources */,
 				7B85BD8E1BBE1F9A0057069F /* MainViewController.m in Sources */,
 				7B8C6BA21BBE2C740043165C /* Routes.m in Sources */,
 				7B04FD091BBEB61200FBB683 /* GenericDAO.m in Sources */,
+				7B04FD131BBEBEB500FBB683 /* ShowModel+Json.m in Sources */,
+				7B04FD191BBEC15300FBB683 /* ShowIDModel.m in Sources */,
 				7B8C6B9B1BBE2BE50043165C /* Connection.m in Sources */,
+				7B04FD0C1BBEBE5300FBB683 /* GenericModel.m in Sources */,
+				7B04FD161BBEBF7200FBB683 /* Validator.m in Sources */,
 				7B04FD021BBEB40F00FBB683 /* Constants.m in Sources */,
 				7B8C6B9E1BBE2C1A0043165C /* JWNetAPIClient.m in Sources */,
+				7B04FD0F1BBEBE6700FBB683 /* ShowModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
