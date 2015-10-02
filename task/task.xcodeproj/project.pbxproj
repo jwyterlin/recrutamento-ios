@@ -13,6 +13,8 @@
 		7B85BD631BBE1DB10057069F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B85BD611BBE1DB10057069F /* LaunchScreen.storyboard */; };
 		7B85BD6E1BBE1DB10057069F /* taskTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B85BD6D1BBE1DB10057069F /* taskTests.swift */; };
 		7B85BD791BBE1DB10057069F /* taskUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B85BD781BBE1DB10057069F /* taskUITests.swift */; };
+		7B85BD8E1BBE1F9A0057069F /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B85BD8D1BBE1F9A0057069F /* MainViewController.m */; settings = {ASSET_TAGS = (); }; };
+		7B85BD941BBE22360057069F /* ShowCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B85BD931BBE22360057069F /* ShowCollectionViewCell.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +47,11 @@
 		7B85BD741BBE1DB10057069F /* taskUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = taskUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B85BD781BBE1DB10057069F /* taskUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = taskUITests.swift; sourceTree = "<group>"; };
 		7B85BD7A1BBE1DB10057069F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7B85BD8B1BBE1F990057069F /* task-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "task-Bridging-Header.h"; sourceTree = "<group>"; };
+		7B85BD8C1BBE1F9A0057069F /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MainViewController.h; path = Controller/MainViewController.h; sourceTree = "<group>"; };
+		7B85BD8D1BBE1F9A0057069F /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MainViewController.m; path = Controller/MainViewController.m; sourceTree = "<group>"; };
+		7B85BD921BBE22360057069F /* ShowCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ShowCollectionViewCell.h; path = Cell/UICollectionViewCell/Show/ShowCollectionViewCell.h; sourceTree = "<group>"; };
+		7B85BD931BBE22360057069F /* ShowCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ShowCollectionViewCell.m; path = Cell/UICollectionViewCell/Show/ShowCollectionViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +102,7 @@
 		7B85BD571BBE1DB10057069F /* task */ = {
 			isa = PBXGroup;
 			children = (
+				7B85BD8F1BBE219D0057069F /* Cell */,
 				7B85BD8A1BBE1EFB0057069F /* Assets */,
 				7B85BD891BBE1EE80057069F /* AppDelegate */,
 				7B85BD861BBE1E900057069F /* Controller */,
@@ -125,6 +133,9 @@
 		7B85BD861BBE1E900057069F /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				7B85BD8C1BBE1F9A0057069F /* MainViewController.h */,
+				7B85BD8D1BBE1F9A0057069F /* MainViewController.m */,
+				7B85BD8B1BBE1F990057069F /* task-Bridging-Header.h */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -160,6 +171,31 @@
 				7B85BD641BBE1DB10057069F /* Info.plist */,
 			);
 			name = Assets;
+			sourceTree = "<group>";
+		};
+		7B85BD8F1BBE219D0057069F /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				7B85BD901BBE21A70057069F /* UICollectionViewCell */,
+			);
+			name = Cell;
+			sourceTree = "<group>";
+		};
+		7B85BD901BBE21A70057069F /* UICollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				7B85BD911BBE21E50057069F /* Show */,
+			);
+			name = UICollectionViewCell;
+			sourceTree = "<group>";
+		};
+		7B85BD911BBE21E50057069F /* Show */ = {
+			isa = PBXGroup;
+			children = (
+				7B85BD921BBE22360057069F /* ShowCollectionViewCell.h */,
+				7B85BD931BBE22360057069F /* ShowCollectionViewCell.m */,
+			);
+			name = Show;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -224,6 +260,7 @@
 		7B85BD4D1BBE1DB10057069F /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "Jhonathan Wyterlin";
 				TargetAttributes = {
@@ -293,6 +330,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				7B85BD591BBE1DB10057069F /* AppDelegate.swift in Sources */,
+				7B85BD941BBE22360057069F /* ShowCollectionViewCell.m in Sources */,
+				7B85BD8E1BBE1F9A0057069F /* MainViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -434,10 +473,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = task/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jhonathan.task;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "task/task-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -445,10 +487,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = task/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jhonathan.task;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "task/task-Bridging-Header.h";
 			};
 			name = Release;
 		};
