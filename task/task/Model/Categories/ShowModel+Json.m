@@ -41,7 +41,48 @@
     ShowIDModel *showIDModel = [[ShowIDModel new] setupWithJson:json[@"ids"]];
     showModel.showID = showIDModel;
     
+    if ( [Validator validateObject:json[@"images"]] ) {
+        
+        NSDictionary *images = json[@"images"];
+        
+        // Banner
+        showModel.urlImageBanner = [self urlOfJson:images forKey:@"banner"];
+        
+        // Clear Art
+        showModel.urlImageClearArt = [self urlOfJson:images forKey:@"clearart"];
+        
+        // Fan Art ( full, medium, thumb )
+        showModel.urlImageFanArt = [self urlOfJson:images forKey:@"fanart"];
+        
+        // Logo
+        showModel.urlImageLogo = [self urlOfJson:images forKey:@"logo"];
+        
+        // Poster ( full, medium, thumb )
+        showModel.urlImagePoster = [self urlOfJson:images forKey:@"poster"];
+        
+        // Thumb
+        showModel.urlImageThumb = [self urlOfJson:images forKey:@"thumb"];
+        
+    }
+    
     return showModel;
+    
+}
+
+#pragma mark - Private methods
+
+-(NSString *)urlOfJson:(NSDictionary *)json forKey:(NSString *)key {
+    
+    if ( [Validator validateObject:json[key]] ) {
+        
+        NSDictionary *dictionary = json[key];
+        
+        if ( [Validator validateObject:dictionary[@"full"]] )
+            return dictionary[@"full"];
+        
+    }
+    
+    return nil;
     
 }
 

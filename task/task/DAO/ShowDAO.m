@@ -29,7 +29,13 @@
     
     Connection *con = [Connection new];
     
-    [con connectWithMethod:RequestMethodGet url:[Routes WS_SHOWS_POPULAR] parameters:nil success:^(id responseData) {
+    NSNumber *page = [NSNumber numberWithInt:1];
+    NSNumber *limit = [NSNumber numberWithInt:10];
+    NSString *extendedImages = @"extended=images";
+    
+    NSString *url = [NSString stringWithFormat:@"%@?page=%i&limit=%i&%@",[Routes WS_SHOWS_POPULAR],[page intValue],[limit intValue],extendedImages];
+    
+    [con connectWithMethod:RequestMethodGet url:url parameters:nil success:^(id responseData) {
         
         if (test) {
             test(responseData,nil);

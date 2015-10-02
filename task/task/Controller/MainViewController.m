@@ -72,6 +72,8 @@ static NSString * const reuseIdentifier = @"ShowCollectionViewCell";
     cell.title.text = show.title;
     cell.imageShow.backgroundColor = [UIColor yellowColor];
     cell.backgroundColor = [UIColor colorWithWhite:0.8 alpha:1.0];
+
+    NSLog(@"url banner: %@", show.urlImageBanner);
     
     return cell;
 }
